@@ -26,3 +26,10 @@ The standard library offers `datetime.fromisoformat`, but its acceptance rules v
 ## Awkward edges
 
 A missing offset is treated as **UTC zero**, not as "unknown". If you need to distinguish "no offset supplied" from "explicit Z", compare the input string, not the result.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
