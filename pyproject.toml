@@ -1,6 +1,6 @@
 [project]
 name = "timestamp-parser-range-py"
-version = "0.1.1"
+version = "0.1.2"
 description = "Converts an ISO 8601 timestamp string into its components, rejecting ambiguous or non-compliant input."
 requires-python = ">=3.10"
 dependencies = []
